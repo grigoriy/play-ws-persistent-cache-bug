@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eh:config
+        xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xmlns:eh='http://www.ehcache.org/v3'
+        xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd">
+
+    <eh:persistence directory="~/ehcache"/>
+
+    <eh:cache alias="test">
+        <eh:key-type>play.api.libs.ws.ahc.cache.EffectiveURIKey</eh:key-type>
+        <eh:value-type>play.api.libs.ws.ahc.cache.ResponseEntry</eh:value-type>
+        <eh:resources>
+            <eh:heap unit="entries">2000</eh:heap>
+            <eh:offheap unit="MB">500</eh:offheap>
+        </eh:resources>
+    </eh:cache>
+
+</eh:config>

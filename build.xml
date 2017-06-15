@@ -1,0 +1,25 @@
+name := "play-ws-persistent-cache-bug"
+
+version := "1.0"
+
+scalaVersion := "2.12.2"
+
+scalacOptions := Seq(
+  "-Xfatal-warnings",
+  "-deprecation",
+  "-feature",
+  "-unchecked",
+  "-Xlint",
+  "-Yno-adapted-args",
+  "-Xfuture",
+  "-encoding", "utf8",
+  "-target:jvm-1.8"
+)
+
+libraryDependencies ++= {
+  Seq(
+    "com.typesafe.play" %% "play-ahc-ws-standalone" % "1.0.0-M10",
+    "org.ehcache" % "ehcache" % "3.3.1",
+    "ch.qos.logback" % "logback-classic" % "1.2.2"
+  )
+}
